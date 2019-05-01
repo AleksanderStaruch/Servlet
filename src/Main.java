@@ -53,7 +53,7 @@ public class Main extends HttpServlet {
             Connection con = DriverManager.getConnection("jdbc:oracle:thin:@db-oracle:1521:baza", "s16960", "oracle12");
             Statement st = con.createStatement();
 
-            String sql="Select * FROM emp , dept WHERE emp.deptno = dept.deptno";
+            String sql="Select * FROM emp , dept WHERE emp.deptno = dept.deptno ";
 
             try { sql += getwhere(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9); }
             catch (Exception e) {}
