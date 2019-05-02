@@ -50,7 +50,7 @@ public class Main extends HttpServlet {
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@db-oracle:1521:baza", "s16960", "oracle12");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@db-oracle:1521:baza", "password", "login");
             Statement st = con.createStatement();
 
             String sql="Select * FROM emp , dept WHERE emp.deptno = dept.deptno ";
