@@ -8,17 +8,8 @@ public class Main extends HttpServlet {
 
     private PrintWriter out;
 
-    public Main() {
-        ServletConfig conf = getServletConfig();
-    }
-
     public void init() {
         ServletConfig conf = getServletConfig();
-        if (conf != null){
-            ServletContext context1 = conf.getServletContext();
-            ServletContext context2 = getServletContext();
-            String name = context2.getServletContextName();
-        }
     }
 
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -50,7 +41,8 @@ public class Main extends HttpServlet {
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@db-oracle:1521:baza", "s16960", "oracle12");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@db-oracle:1521:baza"
+                    , "s16964", "oracle12");
             Statement st = con.createStatement();
 
             String sql="Select * FROM emp , dept WHERE emp.deptno = dept.deptno ";
