@@ -3,6 +3,7 @@ import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main extends HttpServlet {
 
@@ -66,9 +67,9 @@ public class Main extends HttpServlet {
                 out.println("<td>"+rs.getString(11)+"</td> ");
                 out.println("</tr>");
             }
-            out.println("</table>");
-            out.println("</body>");
-            out.println("</html>");
+            //zakonczenie html
+            read("D:\\Pulpit\\informatyka\\I studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html3.txt");
+
             con.close();
             st.close();
             rs.close();
@@ -78,6 +79,21 @@ public class Main extends HttpServlet {
 
 
 
+    }
+
+    private void read(String path){
+        try{
+            File file = new File(path);
+            Scanner od = new Scanner(file);
+            String linia;
+            while(od.hasNext()){
+                linia=od.nextLine();
+                out.println(linia);
+            }
+            od.close();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     private String getwhere(String arg1,String arg2,String arg3,String arg4,String arg5,String arg6,String arg7,String arg8,String arg9){
@@ -126,40 +142,9 @@ public class Main extends HttpServlet {
             arg9="";
         }
 
-        out.println("<!DOCTYPE html>");
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<style>\n" +
-                "table, th, td {\n" +
-                "  border: 1px solid black;\n" +
-                "  border-collapse: collapse;\n" +
-                "}\n" +
-                "th{\n" +
-                "  padding: 10px;\n" +
-                "}\n" +
-                "input {\n" +
-                "width: 100%; \n" +
-                "}\n"+
-                "</style>");
-        out.println("<title>TPO4</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>EMP AND DEPT TABLE </h1>");
+        //start html
+        read("D:\\Pulpit\\informatyka\\I studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html1.txt");
 
-        out.println("<form action=\"/TPO4\">\n");
-        out.println("<table style=\"width:100%\">");
-        out.println("<tr>");
-        out.println("<th>EMPNO</th> ");
-        out.println("<th>ENAME</th> ");
-        out.println("<th>JOB</th> ");
-        out.println("<th>MGR</th> ");
-        out.println("<th>SAL OD</th> ");
-        out.println("<th>SAL DO</th> ");
-        out.println("<th>DEPTNO</th> ");
-        out.println("<th>DNAME</th> ");
-        out.println("<th>LOC</th> ");
-        out.println("</tr>");
-        out.println("<tr>");
         out.println("<td>");
         out.println("<input type=\"number\" name=\"empno\" value=\""+arg1+"\">");
         out.println("</td>");
@@ -195,28 +180,8 @@ public class Main extends HttpServlet {
         out.println("<td>");
         out.println("<input type=\"text\" name=\"loc\" value=\""+arg9+"\">");
         out.println("</td>");
-        out.println("</tr>");
 
-        out.println("<tr>");
-        out.println("<td colspan=\"9\">");
-        out.println("<input type=\"submit\" value=\"Submit form\">");
-        out.println("</td>");
-        out.println("</tr>");
-        out.println("</table>");
-        out.println("</form>");
-
-        out.println("<br/>");
-
-        out.println("<table style=\"width:100%\">");
-        out.println("<tr>");
-        out.println("<th>EMPNO</th> ");
-        out.println("<th>ENAME</th> ");
-        out.println("<th>JOB</th> ");
-        out.println("<th>MGR</th> ");
-        out.println("<th>SAL</th> ");
-        out.println("<th>DEPTNO</th> ");
-        out.println("<th>DNAME</th> ");
-        out.println("<th>LOC</th> ");
-        out.println("</tr>");
+        //kontynuacja html
+        read("D:\\Pulpit\\informatyka\\I studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html2.txt");
     }
 }

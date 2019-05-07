@@ -1,0 +1,23 @@
+</tr>
+
+<tr>
+<td colspan="9">
+<input type="submit" value="Submit form">
+</td>
+</tr>
+</table>
+</form>
+
+<br/>
+
+<table style="width:100%">
+<tr>
+<th>EMPNO</th>
+<th>ENAME</th>
+<th>JOB</th>
+<th>MGR</th>
+<th>SAL</th>
+<th>DEPTNO</th>
+<th>DNAME</th>
+<th>LOC</th>
+</tr>
