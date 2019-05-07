@@ -141,7 +141,6 @@ public class Main extends HttpServlet {
         if(arg9 == null){
             arg9="";
         }
-
         //start html
         read("D:\\Pulpit\\informatyka\\I studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html1.txt");
 
