@@ -18,8 +18,8 @@
 <body>
 <h1>EMP AND DEPT TABLE </h1>
 
-<form action=\"/TPO4\">
-<table style=\"width:100%\">
+<form action="/TPO4">
+<table style="width:100%">
 <tr>
 <th>EMPNO</th>
 <th>ENAME</th>
