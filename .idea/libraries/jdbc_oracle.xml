@@ -2,6 +2,8 @@
   <library name="jdbc-oracle">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jdbc-oracle.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Server/Tomcat/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Server/Tomcat/lib/catalina.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -68,13 +68,14 @@ public class Main extends HttpServlet {
                 out.println("</tr>");
             }
             //zakonczenie html
-            read("D:\\Pulpit\\informatyka\\I studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html3.txt");
+            read("C:\\Users\\oleks\\Dysk Google\\Informatyka\\Studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html3.txt");
 
             con.close();
             st.close();
             rs.close();
         } catch (ClassNotFoundException | SQLException ex) {
             out.println(ex);
+            out.println("OELK");
         }
 
 
@@ -142,7 +143,7 @@ public class Main extends HttpServlet {
             arg9="";
         }
         //start html
-        read("D:\\Pulpit\\informatyka\\I studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html1.txt");
+        read("C:\\Users\\oleks\\Dysk Google\\Informatyka\\Studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html1.txt");
 
         out.println("<td>");
         out.println("<input type=\"number\" name=\"empno\" value=\""+arg1+"\">");
@@ -181,6 +182,6 @@ public class Main extends HttpServlet {
         out.println("</td>");
 
         //kontynuacja html
-        read("D:\\Pulpit\\informatyka\\I studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html2.txt");
+        read("C:\\Users\\oleks\\Dysk Google\\Informatyka\\Studia\\4_semestr\\TPO\\zad4\\TPO4\\web\\WEB-INF\\html\\html2.txt");
     }
 }
