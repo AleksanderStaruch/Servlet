@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th{
+          padding: 10px;
+        }
+        input {
+        width: 100%;
+        }
+    </style>
+    <title>TPO4</title>
+</head>
+<body>
+<h1>EMP AND DEPT TABLE </h1>
+
+<form action="/TPO4">
+<table style="width:100%">
+<tr>
+<th>EMPNO</th>
+<th>ENAME</th>
+<th>JOB</th>
+<th>MGR</th>
+<th>SAL OD</th>
+<th>SAL DO</th>
+<th>DEPTNO</th>
+<th>DNAME</th>
+<th>LOC</th>
+</tr>
+
+<tr>
+
+
